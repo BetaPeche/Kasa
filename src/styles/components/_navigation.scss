@@ -1,7 +1,12 @@
-.active-link{
-    text-decoration: underline;
-}
-
-a {
-    @include font-montserrat(24px, 500, $black);
+.navigation{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 57px;
+    .active-link{
+        text-decoration: underline;
+    }
+    a {
+        @include font-montserrat(24px, 500, $black);
+    }
 }

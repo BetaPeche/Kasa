@@ -1,12 +1,7 @@
-import Navigation from "../components/Navigation"
+import Header from "../components/Header"
 
 const About = () => {
-    return (
-        <div>
-            <Navigation />
-            <h1>About</h1>
-        </div>
-    )
+    return <Header />
 }
 
 export default About
