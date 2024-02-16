@@ -1,19 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
   font-family: "font-1";
   src: url(../assets/fonts/JosefinSans-Medium.ttf);
 }
 
-$font-1: "font-1", sans-serif;
+$font-1: "Montserrat", sans-serif;
 
-$color-1: #61dafb;
-$color-2: salmon;
-$color-3: #282c34;
-$white: rgb(243, 243, 243);
+$color-1: #FF6060;
+// $color-2: salmon;
+$black: black;
+$white: white;
 
 @mixin verticalCenter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin font-montserrat($size, $bold, $color) {
+  font-family: $font-1;
+  font-size: $size;
+  color: $color;
+  font-weight: $bold;
 }
 
 * {
@@ -29,4 +38,7 @@ body {
 }
 li {
   list-style-type: none;
+}
+a {
+  text-decoration: none;
 }
