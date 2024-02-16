@@ -1,5 +1,12 @@
+import Navigation from "../components/Navigation"
+
 const About = () => {
-    return <h1>A propos</h1>
+    return (
+        <div>
+            <Navigation />
+            <h1>About</h1>
+        </div>
+    )
 }
 
 export default About
