@@ -1,4 +1,4 @@
-const Background = () => {
+const Banner = () => {
     return (
         <section className="header-img">
             <p>Chez vous, partout et ailleurs</p>
@@ -6,4 +6,4 @@ const Background = () => {
     )
 }
 
-export default Background
+export default Banner
