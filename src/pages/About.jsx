@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import Footer from "../components/Footer"
 import Header from "../components/Header"
 
 const background =
@@ -10,6 +11,7 @@ const About = () => {
         <>
             <Header />
             <Banner text={text} background={background} />
+            <Footer />
         </>
     )
 }

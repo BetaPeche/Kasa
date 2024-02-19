@@ -1,4 +1,5 @@
 import Banner from "../components/Banner"
+import Footer from "../components/Footer"
 import Header from "../components/Header"
 import HomeContent from "../components/HomeContent"
 
@@ -12,6 +13,7 @@ const Home = () => {
             <Header />
             <Banner text={text} background={background} />
             <HomeContent />
+            <Footer />
         </>
     )
 }
