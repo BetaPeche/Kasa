@@ -9,7 +9,20 @@
     border-radius: 25px;
     background-color: #F6F6F6;
     padding: 50px;
-    h1{
-        background-color: aqua;
+}
+
+@media (max-width: 1024px) {
+    .home-content{
+        margin-top: 22px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+        padding: 0px;
+        background-color: $white;
     }
 }

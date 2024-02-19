@@ -10,3 +10,12 @@
         @include font-montserrat(24px, 500, $black);
     }
 }
+
+@media (max-width: 768px) {
+    .navigation{
+        gap: 26px;
+        a {
+            @include font-montserrat(12px, 500, $black);
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.card{
+    background-color: #FF6060;
+    border-radius: 10px;
+    height: 340px;
+    padding: 268px 20px 10px 20px;
+    @include font-montserrat(18px, 700, $white);
+}
