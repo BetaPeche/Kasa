@@ -1,4 +1,3 @@
-import React from "react"
 import logement from "../assets/logements.json"
 import Card from "./Card"
 

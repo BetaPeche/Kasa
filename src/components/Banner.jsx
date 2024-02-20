@@ -8,7 +8,7 @@ const Banner = ({ background, text = "" }) => {
                 background: background,
             }}
         >
-            {text ? <p>{text}</p> : null}
+            {text && <p>{text}</p>}
         </section>
     )
 }
