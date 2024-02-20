@@ -8,7 +8,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
     padding: 0px 60px 0px 60px;
     text-align: center;
     @include font-montserrat(24px, 500, $white);
@@ -17,4 +17,10 @@ footer{
         height: 41px;
     }
 
+}
+
+@media (max-width: 768px) {
+    footer{
+        gap: 25px;
+    }
 }

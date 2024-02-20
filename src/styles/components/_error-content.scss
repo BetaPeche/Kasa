@@ -1,0 +1,18 @@
+.error-content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1{
+        @include font-montserrat(288px, 700, $color-1);
+    }
+    h2{
+        @include font-montserrat(36px, 500, $color-1);
+    }
+    a{
+        @include font-montserrat(18px, 500, $black);
+        text-decoration: underline;
+        margin-top: 60px;
+    }
+}

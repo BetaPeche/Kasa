@@ -1,5 +1,15 @@
+import ErrorContent from "../components/ErrorContent"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
+
 const Error = () => {
-    return <h1>404</h1>
+    return (
+        <>
+            <Header />
+            <ErrorContent />
+            <Footer />
+        </>
+    )
 }
 
 export default Error
