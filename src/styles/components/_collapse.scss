@@ -1,0 +1,50 @@
+.collapse{
+    width: 100%;
+    max-width: 1023px;
+    .collapse-title{
+        height: 54px;
+        background-color: $color-1;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2{
+            @include font-montserrat(24px, 700, $white);
+        }
+    }
+    .collapse-content{
+        max-height: 0px;
+        background-color: #FAFBFA;
+        padding: 0px 20px 0px 20px;
+        @include font-montserrat(18px, 500, $black);
+        transition: max-height 0s, padding .5s;
+        p{
+            opacity: 0;
+            transition: opacity .1s;
+        }
+    }
+}
+
+.open{
+    .collapse-content{
+        max-height: 999px;
+        padding: 20px 20px 20px 20px;
+        transition: max-height .3s, padding .5s;
+        p{
+            opacity: 1;
+            transition: opacity .3s;
+        }
+    }
+}
+
+.fa-chevron-down {
+    font-size: 24px;
+    color: $white;
+    transform: rotate(180deg);
+    transition: .3s;
+    &.open{
+        transform: rotate(0deg);
+    }
+}

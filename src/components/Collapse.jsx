@@ -4,9 +4,27 @@ const Collapse = () => {
     const [showCollapse, setShowCollapse] = useState(false)
 
     return (
-        <div className="collapse">
-            <div className="collapse-title" onClick={}>Test</div>
-            <div className="collapse-content"></div>
+        <div className={showCollapse ? "collapse open" : "collapse"}>
+            <div
+                className="collapse-title"
+                onClick={() =>
+                    showCollapse
+                        ? setShowCollapse(false)
+                        : setShowCollapse(true)
+                }
+            >
+                <h2>Test</h2>
+                <i
+                    className={
+                        showCollapse
+                            ? "fa-solid fa-chevron-down open"
+                            : "fa-solid fa-chevron-down"
+                    }
+                ></i>
+            </div>
+            <div className="collapse-content">
+                <p>contenu</p>
+            </div>
         </div>
     )
 }
