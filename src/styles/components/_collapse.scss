@@ -17,6 +17,7 @@
     .collapse-content{
         max-height: 0px;
         background-color: #FAFBFA;
+        border-radius: 5px;
         padding: 0px 20px 0px 20px;
         @include font-montserrat(18px, 500, $black);
         transition: max-height 0s, padding .5s;
