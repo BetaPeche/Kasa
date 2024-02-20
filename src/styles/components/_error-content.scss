@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: space-around;
     h1{
         @include font-montserrat(288px, 700, $color-1);
     }
@@ -13,6 +14,33 @@
     a{
         @include font-montserrat(18px, 500, $black);
         text-decoration: underline;
-        margin-top: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .error-content{
+        h1{
+            @include font-montserrat(200px, 700, $color-1);
+        }
+        h2{
+            @include font-montserrat(18px, 500, $color-1);
+        }
+        a{
+            @include font-montserrat(14px, 500, $black);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .error-content{
+        h1{
+            @include font-montserrat(96px, 700, $color-1);
+        }
+        h2{
+            @include font-montserrat(18px, 500, $color-1);
+        }
+        a{
+            @include font-montserrat(14px, 500, $black);
+        }
     }
 }
