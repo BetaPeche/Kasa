@@ -1,10 +1,30 @@
 .about-content{
+    width: calc(100% - 40px);
+    max-width: 1023px;
     flex-grow: 1;
     margin-top: 38px;
-    max-width: 1240px;
-    width: calc(100% - 40px);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .about-content{
+        margin-top: 20px;
+        .collapse{
+            .collapse-title{
+                height: 30px;
+                h2{
+                    @include font-montserrat(13px, 700, $white);
+                }
+                .fa-chevron-down {
+                    font-size: 16px;
+                }
+            }
+            .collapse-content{
+                @include font-montserrat(16px, 500, $black);
+            }
+        }
+    }
 }

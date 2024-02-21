@@ -24,7 +24,7 @@ const Collapse = ({ title, content }) => {
                 ></i>
             </div>
             <div className="collapse-content">
-                <p>{content}</p>
+                {showCollapse && <p>{content}</p>}
             </div>
         </div>
     )
