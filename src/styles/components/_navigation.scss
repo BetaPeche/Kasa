@@ -16,6 +16,7 @@
         gap: 26px;
         a {
             @include font-montserrat(12px, 500, $black);
+            text-transform: uppercase;
         }
     }
 }
