@@ -16,7 +16,7 @@ const Housing = () => {
         } else {
             setData(entry)
         }
-    }, [id, request])
+    }, [id, request, navigate])
 
     if (!data) {
         return null
