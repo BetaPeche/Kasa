@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Card = ({ logement }) => {
     return (
-        <NavLink to={`/housing/${logement.id}`}>
+        <Link to={`/housing/${logement.id}`}>
             <article
                 className="card"
                 style={{
@@ -12,7 +12,7 @@ const Card = ({ logement }) => {
             >
                 {logement.title}
             </article>
-        </NavLink>
+        </Link>
     )
 }
 
