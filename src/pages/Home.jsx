@@ -1,6 +1,4 @@
 import Banner from "../components/Banner"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
 import Card from "../components/Card"
 import { useEffect, useState } from "react"
 
@@ -14,8 +12,8 @@ const Home = () => {
         const fetchData = async () => {
             try {
                 const response = await fetch("/src/assets/logements.json")
-                const surveyData = await response.json()
-                setData(surveyData)
+                const collectedData = await response.json()
+                setData(collectedData)
             } catch (err) {
                 console.log(err)
             }
@@ -25,14 +23,12 @@ const Home = () => {
 
     return (
         <>
-            <Header />
             <Banner text={text} background={background} />
             <main className="home-content">
                 {data.map((data, index) => (
                     <Card key={index} logement={data} />
                 ))}
             </main>
-            <Footer />
         </>
     )
 }

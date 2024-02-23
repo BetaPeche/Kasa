@@ -1,6 +1,4 @@
 import Banner from "../components/Banner"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
 import Collapse from "../components/Collapse"
 
 const background =
@@ -33,18 +31,12 @@ const data = [
 const About = () => {
     return (
         <>
-            <Header />
             <Banner text={text} background={background} />
             <main className="about-content">
-                {data.map((data, index) => (
-                    <Collapse
-                        key={index}
-                        title={data.title}
-                        content={data.content}
-                    />
+                {data.map(({ title, content }, index) => (
+                    <Collapse key={index} title={title} content={content} />
                 ))}
             </main>
-            <Footer />
         </>
     )
 }

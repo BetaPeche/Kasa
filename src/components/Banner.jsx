@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 
-const Banner = ({ background, text = "" }) => {
+const Banner = ({ background, text }) => {
     return (
         <section
             className="banner"

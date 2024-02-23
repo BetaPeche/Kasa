@@ -9,9 +9,10 @@ const Collapse = ({ title, content }) => {
             <div
                 className="collapse-title"
                 onClick={() =>
-                    showCollapse
-                        ? setShowCollapse(false)
-                        : setShowCollapse(true)
+                    // showCollapse
+                    //     ? setShowCollapse(false)
+                    //     : setShowCollapse(true)
+                    setShowCollapse((prevState) => !prevState)
                 }
             >
                 <h2>{title}</h2>
