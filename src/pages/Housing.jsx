@@ -1,18 +1,23 @@
 import { useParams } from "react-router-dom"
 import { DataContext } from "../utils/context/context"
 import { useContext, useEffect, useState } from "react"
-// import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const Housing = () => {
     const { id } = useParams()
     const request = useContext(DataContext)
     const [data, setData] = useState(null)
-    // const navigate = useNavigate();
+    const navigate = useNavigate()
 
     useEffect(() => {
         const entry = request.find((array) => array.id == id)
-        setData(entry)
+        if (!entry) {
+            navigate("/error")
+        } else {
+            setData(entry)
+        }
     }, [id, request])
+
     if (!data) {
         return null
     }
