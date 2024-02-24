@@ -1,7 +1,7 @@
 import { useState } from "react"
 import PropTypes from "prop-types"
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, content, contentList }) => {
     const [showCollapse, setShowCollapse] = useState(false)
 
     return (
@@ -25,7 +25,14 @@ const Collapse = ({ title, content }) => {
                 ></i>
             </div>
             <div className="collapse-content">
-                {showCollapse && <p>{content}</p>}
+                {content && showCollapse && <p>{content}</p>}
+                {contentList && showCollapse && (
+                    <ul>
+                        {contentList.map((contenu) => (
+                            <li key={contenu}>{contenu}</li>
+                        ))}
+                    </ul>
+                )}
             </div>
         </div>
     )
@@ -33,7 +40,8 @@ const Collapse = ({ title, content }) => {
 
 Collapse.propTypes = {
     title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
+    content: PropTypes.string,
+    contentList: PropTypes.array,
 }
 
 export default Collapse

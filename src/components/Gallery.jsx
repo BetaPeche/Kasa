@@ -35,9 +35,11 @@ const Gallery = ({ pictures, name }) => {
                         alt="right-arrow"
                         onClick={rightClick}
                     />
-                    <p>
-                        {index + 1}/{pictures.length}
-                    </p>
+                    {pictures.length > 1 && (
+                        <p>
+                            {index + 1}/{pictures.length}
+                        </p>
+                    )}
                 </>
             )}
         </div>
