@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 const Housing = ({ data }) => {
     const { id } = useParams()
     const navigate = useNavigate()
-    const [hosting, sethosting] = useState([])
+    const [hosting, sethosting] = useState()
 
     useEffect(() => {
         const entry = data.find((array) => array.id == id)
@@ -16,6 +16,10 @@ const Housing = ({ data }) => {
             sethosting(entry)
         }
     }, [data, id, navigate])
+    if (!hosting) {
+        return
+    }
+    console.log(hosting.pictures[0])
 
     return <h1>Logement: {hosting.title}</h1>
 }
