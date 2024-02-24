@@ -12,19 +12,5 @@
 @media (max-width: 768px) {
     .about-content{
         margin-top: 20px;
-        .collapse{
-            .collapse-title{
-                height: 30px;
-                h2{
-                    @include font-montserrat(13px, 700, $white);
-                }
-                .fa-chevron-down {
-                    font-size: 16px;
-                }
-            }
-            .collapse-content{
-                @include font-montserrat(16px, 500, $black);
-            }
-        }
     }
 }

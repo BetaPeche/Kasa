@@ -2,6 +2,7 @@
     max-width: 1240px;
     width: calc(100% - 40px);
     margin-top: 50px;
+    flex-grow: 1;
     .hosting-info{
         margin-top: 30px;
         width: 100%;
@@ -18,6 +19,7 @@
                 margin-top: 20px;
                 display: flex;
                 gap: 10px;
+                flex-wrap: wrap;
             }
         }
         .host{
@@ -50,34 +52,44 @@
 }
 
 @media (max-width: 768px) {
+    
     .housing-content{
+        margin-top: 27px;
         .hosting-info{
+            margin-top: 15px;
             flex-direction: column;
             .hosting-title{
                 h2{
-                    @include font-montserrat(36px, 500, $color-1);
-                }
-                p{
-                    @include font-montserrat(18px, 500, $black);
-                }
-            }
-            .host{
-                h3{
                     @include font-montserrat(18px, 500, $color-1);
                 }
-                img{
+                p{
+                    @include font-montserrat(14px, 500, $black);
+                }
+                .housing-tags{
+                    margin-top: 10px;
                 }
             }
             .host{
+                margin-top: 16px;
                 flex-direction: row-reverse;
                 align-items: center;
                 justify-content: space-between;
+                h3{
+                    @include font-montserrat(12px, 500, $color-1);
+                }
+                img{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 16px;
+                }
+                .host-img-name{
+                }
             }
         }
         .collapses{
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 50px;
+                grid-template-columns: 1fr;
+                gap: 20px;
         }
     }
 }

@@ -6,3 +6,13 @@
     padding: 0px 30px 0px 30px;
     @include font-montserrat(14px, 700, $white);
 }
+@media (max-width: 768px) {
+    .tag{
+        height: 18px;
+        border-radius: 5px;
+        background-color: $color-1;
+        line-height: 18px;
+        padding: 0px 30px 0px 30px;
+        @include font-montserrat(10px, 700, $white);
+    }
+}
