@@ -1,28 +1,27 @@
 import { useParams } from "react-router-dom"
-import { DataContext } from "../utils/context/context"
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import PropTypes from "prop-types"
 
-const Housing = () => {
+const Housing = ({ data }) => {
     const { id } = useParams()
-    const request = useContext(DataContext)
-    const [data, setData] = useState(null)
     const navigate = useNavigate()
+    const [hosting, sethosting] = useState([])
 
     useEffect(() => {
-        const entry = request.find((array) => array.id == id)
+        const entry = data.find((array) => array.id == id)
         if (!entry) {
             navigate("/error")
         } else {
-            setData(entry)
+            sethosting(entry)
         }
-    }, [id, request, navigate])
+    }, [data, id, navigate])
 
-    if (!data) {
-        return null
-    }
+    return <h1>Logement: {hosting.title}</h1>
+}
 
-    return <h1>Logement: {data.title}</h1>
+Housing.propTypes = {
+    data: PropTypes.array.isRequired,
 }
 
 export default Housing

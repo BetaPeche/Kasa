@@ -1,10 +1,8 @@
 import Banner from "../components/Banner"
 import Card from "../components/Card"
-import { useContext } from "react"
-import { DataContext } from "../utils/context/context"
+import PropTypes from "prop-types"
 
-const Home = () => {
-    const data = useContext(DataContext)
+const Home = ({ data }) => {
     const background =
         "linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url(../../../assets/img/background.png) center/cover"
     const text = "Chez vous, partout et ailleurs"
@@ -20,6 +18,10 @@ const Home = () => {
             </main>
         </>
     )
+}
+
+Home.propTypes = {
+    data: PropTypes.array.isRequired,
 }
 
 export default Home
