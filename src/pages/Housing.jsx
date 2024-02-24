@@ -21,7 +21,29 @@ const Housing = ({ data }) => {
     }
     console.log(hosting.pictures[0])
 
-    return <h1>Logement: {hosting.title}</h1>
+    return (
+        <main className="housing-content">
+            <div className="gallery">
+                <img
+                    className="gallery-picture"
+                    src={hosting.pictures[0]}
+                    alt={hosting.title}
+                />
+                <img className="arrow left-arrow" src="" alt="" />
+                <img className="arrow right-arrow" src="" alt="" />
+            </div>
+            <div className="hosting-info">
+                <div className="hosting-title">
+                    <h2>{hosting.title}</h2>
+                    <p>{hosting.location}</p>
+                </div>
+                <div className="host">
+                    <h3>{hosting.host.name}</h3>
+                    <img src={hosting.host.picture} alt="" />
+                </div>
+            </div>
+        </main>
+    )
 }
 
 Housing.propTypes = {

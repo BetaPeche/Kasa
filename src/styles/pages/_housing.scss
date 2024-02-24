@@ -1,0 +1,42 @@
+.housing-content{
+    max-width: 1240px;
+    width: calc(100% - 40px);
+    margin-top: 50px;
+    .gallery{
+        position: relative;
+        .gallery-picture{
+            width: 100%;
+            height: 415px;
+            border-radius: 25px;
+            object-fit: cover;
+        }
+    }
+    .hosting-info{
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .hosting-title{
+            h2{
+                @include font-montserrat(36px, 500, $color-1);
+            }
+            p{
+                @include font-montserrat(18px, 500, $black);
+            }
+        }
+        .host{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            h3{
+                @include font-montserrat(18px, 500, $color-1);
+            }
+            img{
+                width: 64px;
+                height: 64px;
+                border-radius: 32px;
+                object-fit: cover;
+            }
+        }
+    }
+}
