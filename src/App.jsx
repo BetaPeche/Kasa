@@ -5,38 +5,20 @@ import Housing from "./pages/Housing"
 import Error from "./pages/Error"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import { DataContext } from "./utils/context/context"
-import { useEffect, useState } from "react"
+import data from "../src/assets/logements.json"
 
 const App = () => {
-    const [data, setData] = useState([])
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("/src/assets/logements.json")
-                const collectedData = await response.json()
-                setData(collectedData)
-            } catch (err) {
-                console.log(err)
-            }
-        }
-        fetchData()
-    }, [])
-
     return (
         <BrowserRouter>
-            <DataContext.Provider value={data}>
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/housing/:id" element={<Housing />} />
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home data={data} />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/housing/:id" element={<Housing data={data} />} />
 
-                    <Route path="*" element={<Error />} />
-                </Routes>
-                <Footer />
-            </DataContext.Provider>
+                <Route path="*" element={<Error />} />
+            </Routes>
+            <Footer />
         </BrowserRouter>
     )
 }
