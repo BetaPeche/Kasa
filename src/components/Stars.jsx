@@ -12,7 +12,7 @@ const Stars = ({ numbers }) => {
     return <div className="stars">{stars}</div>
 }
 Stars.propTypes = {
-    numbers: PropTypes.string.isRequired,
+    numbers: PropTypes.number.isRequired,
 }
 
 export default Stars

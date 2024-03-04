@@ -43,7 +43,7 @@ const Housing = ({ data }) => {
                         <h3>{hosting.host.name}</h3>
                         <img src={hosting.host.picture} alt="" />
                     </div>
-                    <Stars numbers={hosting.rating} />
+                    <Stars numbers={parseInt(hosting.rating)} />
                 </div>
             </div>
             <div className="collapses">
