@@ -25,13 +25,13 @@ const Gallery = ({ pictures, name }) => {
                 <>
                     <img
                         className="arrow left-arrow"
-                        src="/public/assets/img/left-arrow.png"
+                        src="/assets/img/left-arrow.png"
                         alt="left-arrow"
                         onClick={leftClick}
                     />
                     <img
                         className="arrow right-arrow"
-                        src="/public/assets/img/right-arrow.png"
+                        src="/assets/img/right-arrow.png"
                         alt="right-arrow"
                         onClick={rightClick}
                     />
