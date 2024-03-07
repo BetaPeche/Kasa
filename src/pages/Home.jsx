@@ -3,8 +3,7 @@ import Card from "../components/Card"
 import PropTypes from "prop-types"
 
 const Home = ({ data }) => {
-    const background =
-        "linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url(../../../assets/img/background.png) center/cover"
+    const background = "../../../assets/img/background.png"
     const text = "Chez vous, partout et ailleurs"
     // console.log(data)
 

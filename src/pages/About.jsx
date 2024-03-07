@@ -1,8 +1,7 @@
 import Banner from "../components/Banner"
 import Collapse from "../components/Collapse"
 
-const background =
-    "linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),url(../../../assets/img/background2.png) center/cover"
+const background = "../../../assets/img/background2.png"
 const text = ""
 
 const data = [
