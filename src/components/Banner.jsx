@@ -8,7 +8,8 @@ const Banner = ({ background, text }) => {
                 background: background,
             }}
         >
-            {text && <p>{text}</p>}
+            <img src="" alt="" />
+            {text && <h1>{text}</h1>}
         </section>
     )
 }
